@@ -8,6 +8,8 @@ Wrote in Rust.
 
 </div>
 
+---
+
 ## Features
 - Convert `.md` file to `.html` file.
 - Use *built-in editor* to write your markdown code.
@@ -16,6 +18,8 @@ Wrote in Rust.
 1. Make sure you have **Rust** on your computer. (Download [here](https://rust-lang.org/tools/install/))
 2. Open the repository folder.
 3. Run the `cargo build` to build the project or `cargo run` to run the project
+
+---
 
 ## Arni
 ```text
