@@ -4,7 +4,7 @@ use std::process::Command;
 
 fn clear() {
   if cfg!(target_os = "windows") {
-    Command::new("cls").status().unwrap();
+    Command::new("cmd").args(["/C", "cls"]).status().unwrap();
   } else {
     Command::new("clear").status().unwrap();
   }
