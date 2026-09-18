@@ -17,7 +17,7 @@ fn main() {
     println!("markdown-to-html\n");
     println!("1. File convert\n2. Text convert\n3. Exit");
 
-    print!("[1, 2 or 3] >");
+    print!("[1, 2 or 3] > ");
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut data).expect("Failed to read line");
 
@@ -76,7 +76,7 @@ fn file_convert() {
   }
 
   let html = format!(
-    r#"<!DOCTYPE html>
+r#"<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -89,8 +89,11 @@ fn file_convert() {
 </html>
 "#
   );
+
   file.write_all(html.as_bytes()).expect("Failed to write to file");
   println!("Successfully converted to {path}.html!");
+
+  io::stdin().read_line(&mut data).expect("Failed to read line");
 }
 
 fn text_convert() {}
